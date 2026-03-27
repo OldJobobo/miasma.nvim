@@ -7,6 +7,22 @@ local M = {}
 M.VERSION = version.current
 
 local COMPILED_PATH = vim.fs.joinpath(vim.fn.stdpath("cache"), "miasma_compiled.lua")
+local ROOT = vim.fs.dirname(vim.fs.dirname(debug.getinfo(1, "S").source:sub(2)))
+
+local function source_stamp()
+  local paths = vim.fn.globpath(ROOT, "lua/miasma/**/*.lua", false, true)
+  table.insert(paths, vim.fs.joinpath(ROOT, "colors", "miasma.lua"))
+
+  local latest = 0
+  for _, path in ipairs(paths) do
+    local stat = vim.uv.fs_stat(path)
+    if stat and stat.mtime and stat.mtime.sec and stat.mtime.sec > latest then
+      latest = stat.mtime.sec
+    end
+  end
+
+  return latest
+end
 
 local function load_palette()
   local opts = config.get()
@@ -44,9 +60,9 @@ local function build_groups(palette)
     require("miasma.groups.syntax"),
     require("miasma.groups.lsp"),
     require("miasma.groups.treesitter"),
-    require("miasma.groups.semantic_tokens"),
     require("miasma.groups.integrations"),
     require("miasma.groups.links"),
+    require("miasma.groups.semantic_tokens"),
   }
 
   for _, module in ipairs(modules) do
@@ -88,6 +104,7 @@ end
 local function compile_key()
   return vim.json.encode({
     version = M.VERSION,
+    source_stamp = source_stamp(),
     options = config.get(),
   })
 end
