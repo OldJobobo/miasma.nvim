@@ -1,0 +1,52 @@
+return function(palette)
+  return {
+    AerialGuide = { fg = palette.surface_highlight },
+    AerialLine = { fg = palette.amber, style = "bold" },
+
+    FlashBackdrop = { fg = palette.text_muted },
+    FlashCurrent = { fg = palette.amber, style = "bold" },
+    FlashLabel = { fg = palette.base, bg = palette.accent_secondary, style = "bold" },
+    FlashMatch = { fg = palette.text, style = "underline" },
+
+    HopNextKey = { fg = palette.amber, style = "bold,underline" },
+    HopNextKey1 = { fg = palette.accent_secondary, style = "bold" },
+    HopNextKey2 = { fg = palette.accent_primary, style = "bold,italic" },
+    HopUnmatched = { fg = palette.text_muted },
+
+    LeapBackdrop = { fg = palette.text_muted },
+    LeapLabel = { fg = palette.base, bg = palette.accent_primary, style = "bold,nocombine" },
+    LeapMatch = { fg = palette.amber, sp = palette.amber, style = "bold,underline,nocombine" },
+
+    NavicIconsArray = { fg = palette.accent_primary },
+    NavicIconsBoolean = { fg = palette.orange },
+    NavicIconsClass = { fg = palette.accent_primary, style = "bold" },
+    NavicIconsConstant = { fg = palette.orange },
+    NavicIconsConstructor = { fg = palette.accent_primary },
+    NavicIconsEnum = { fg = palette.accent_primary },
+    NavicIconsEnumMember = { fg = palette.error },
+    NavicIconsField = { fg = palette.text },
+    NavicIconsFile = { fg = palette.accent_secondary },
+    NavicIconsFunction = { fg = palette.accent_primary },
+    NavicIconsInterface = { fg = palette.accent_primary, style = "bold" },
+    NavicIconsMethod = { fg = palette.accent_primary },
+    NavicIconsModule = { fg = palette.accent_secondary },
+    NavicIconsNamespace = { fg = palette.accent_secondary },
+    NavicIconsNumber = { fg = palette.orange },
+    NavicIconsObject = { fg = palette.accent_primary },
+    NavicIconsOperator = { fg = palette.text },
+    NavicIconsPackage = { fg = palette.accent_secondary },
+    NavicIconsProperty = { fg = palette.text },
+    NavicIconsString = { fg = palette.orange },
+    NavicIconsStruct = { fg = palette.accent_primary, style = "bold" },
+    NavicIconsTypeParameter = { fg = palette.accent_primary },
+    NavicIconsVariable = { fg = palette.text },
+    NavicSeparator = { fg = palette.text_muted },
+    NavicText = { fg = palette.text },
+
+    FocusedSymbol = { fg = palette.amber, style = "bold" },
+    OutlineCurrent = { fg = palette.amber, style = "bold" },
+    IlluminatedWordRead = { bg = palette.surface },
+    IlluminatedWordText = { bg = palette.surface },
+    IlluminatedWordWrite = { bg = palette.surface, style = "bold" },
+  }
+end

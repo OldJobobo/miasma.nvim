@@ -4,6 +4,11 @@
 " a fog descends upon your editor
 " https://github.com/xero/miasma.nvim
 
+if has("nvim")
+  lua require("miasma").load()
+  finish
+endif
+
 set background=dark
 hi! clear
 

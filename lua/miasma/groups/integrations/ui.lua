@@ -1,0 +1,78 @@
+return function(palette)
+  return {
+    NoiceCmdline = { fg = palette.text },
+    NoiceCmdlineIcon = { fg = palette.accent_secondary, style = "bold" },
+    NoiceCmdlineIconSearch = { fg = palette.amber, style = "bold" },
+    NoiceCmdlinePopupBorder = { fg = palette.orange, bg = palette.base },
+    NoiceCmdlinePopupBorderSearch = { fg = palette.amber, bg = palette.base },
+    NoiceConfirmBorder = { fg = palette.accent_primary, bg = palette.base },
+    NoiceFormatProgressDone = { fg = palette.text, bg = palette.surface },
+    NoiceFormatProgressTodo = { fg = palette.text_muted, bg = palette.base },
+    NoiceMini = { fg = palette.text_muted },
+
+    NotifyBackground = { bg = palette.base },
+    NotifyDEBUGBorder = { fg = palette.orange, bg = palette.base },
+    NotifyDEBUGIcon = { fg = palette.orange },
+    NotifyDEBUGTitle = { fg = palette.orange, style = "bold" },
+    NotifyERRORBorder = { fg = palette.error, bg = palette.base },
+    NotifyERRORIcon = { fg = palette.error },
+    NotifyERRORTitle = { fg = palette.error, style = "bold" },
+    NotifyINFOBorder = { fg = palette.accent_secondary, bg = palette.base },
+    NotifyINFOIcon = { fg = palette.accent_secondary },
+    NotifyINFOTitle = { fg = palette.accent_secondary, style = "bold" },
+    NotifyTRACEBorder = { fg = palette.text, bg = palette.base },
+    NotifyTRACEIcon = { fg = palette.text },
+    NotifyTRACETitle = { fg = palette.text, style = "bold" },
+    NotifyWARNBorder = { fg = palette.amber, bg = palette.base },
+    NotifyWARNIcon = { fg = palette.amber },
+    NotifyWARNTitle = { fg = palette.amber, style = "bold" },
+
+    TroubleCount = { fg = palette.base, bg = palette.orange, style = "bold" },
+    TroubleNormal = { fg = palette.text, bg = palette.base },
+    TroubleNormalNC = { fg = palette.text, bg = palette.base },
+    TroubleText = { fg = palette.text_muted },
+
+    TreesitterContext = { fg = palette.text, bg = palette.base },
+    TreesitterContextBottom = { sp = palette.surface, style = "underline" },
+    TreesitterContextLineNumber = { fg = palette.amber, bg = palette.base },
+
+    RainbowDelimiterBlue = { fg = palette.accent_secondary },
+    RainbowDelimiterCyan = { fg = palette.accent_primary },
+    RainbowDelimiterGreen = { fg = palette.accent_primary },
+    RainbowDelimiterOrange = { fg = palette.orange },
+    RainbowDelimiterRed = { fg = palette.error },
+    RainbowDelimiterViolet = { fg = palette.amber },
+    RainbowDelimiterYellow = { fg = palette.amber },
+
+    UfoFoldedEllipsis = { fg = palette.base, bg = palette.accent_secondary, style = "bold" },
+    UfoFoldedFg = { fg = palette.amber },
+
+    AlphaButtons = { fg = palette.amber },
+    AlphaFooter = { fg = palette.amber, style = "italic" },
+    AlphaHeader = { fg = palette.accent_secondary, style = "bold" },
+    AlphaHeaderLabel = { fg = palette.orange },
+    AlphaShortcut = { fg = palette.accent_primary, style = "bold" },
+
+    DashboardCenter = { fg = palette.accent_primary },
+    DashboardDesc = { fg = palette.accent_secondary },
+    DashboardFiles = { fg = palette.text },
+    DashboardFooter = { fg = palette.amber, style = "italic" },
+    DashboardHeader = { fg = palette.accent_secondary, style = "bold" },
+    DashboardIcon = { fg = palette.orange, style = "bold" },
+    DashboardKey = { fg = palette.orange },
+    DashboardMruTitle = { fg = palette.accent_secondary, style = "bold" },
+    DashboardProjectTitle = { fg = palette.accent_secondary, style = "bold" },
+    DashboardShortCut = { fg = palette.amber, style = "bold" },
+
+    DropBarIconUISeparator = { fg = palette.text_muted },
+    DropBarMenuHoverEntry = { fg = palette.text_bright, bg = palette.surface_highlight },
+    DropBarMenuHoverIcon = { fg = palette.base, bg = palette.amber },
+    DropBarMenuHoverSymbol = { fg = palette.text, style = "bold" },
+
+    FidgetTask = { fg = palette.text, bg = palette.base },
+    FidgetTitle = { fg = palette.accent_secondary, style = "bold" },
+
+    HarpoonBorder = { fg = palette.orange, bg = palette.base },
+    HarpoonWindow = { fg = palette.text, bg = palette.base },
+  }
+end

@@ -1,0 +1,28 @@
+return function()
+  return {
+    FzfLuaBorder = { link = "Normal" },
+    FzfLuaCursor = { link = "Cursor" },
+    FzfLuaCursorLine = { link = "CursorLine" },
+    FzfLuaCursorLineNr = { link = "CursorLineNr" },
+    FzfLuaNormal = { link = "Normal" },
+    FzfLuaScrollFloatEmpty = { link = "PmenuSbar" },
+    FzfLuaScrollFloatFull = { link = "PmenuThumb" },
+    FzfLuaSearch = { link = "IncSearch" },
+    MasonHeaderSecondary = { link = "LazyButtonActive" },
+    MasonHighlightBlockBold = { link = "LazyButtonActive" },
+    MasonHighlightBlock = { link = "LazyButtonActive" },
+    MasonMutedBlockBold = { link = "MasonHighlight" },
+    MasonMutedBlock = { link = "MasonMuted" },
+    TelescopeMatching = { link = "Special" },
+    TelescopePreviewBorder = { link = "TelescopeBorder" },
+    TelescopePreviewLine = { link = "TelescopeSelection" },
+    TelescopePreviewTitle = { link = "TelescopeTitle" },
+    TelescopePromptCounter = { link = "TelescopeBorder" },
+    TelescopePromptPrefix = { link = "TelescopeTitle" },
+    TelescopePromptTitle = { link = "TelescopeTitle" },
+    TelescopeResultsBorder = { link = "TelescopeBorder" },
+    TelescopeResultsFileIcon = { link = "Special" },
+    TelescopeResultsTitle = { link = "TelescopeTitle" },
+    TelescopeSelection = { link = "Visual" },
+  }
+end

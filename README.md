@@ -1,8 +1,10 @@
 # miasma.nvim ☁️
 
-a color scheme for `{neo,}vim` inspired by the woods, built using [lush](https://github.com/rktjmp/lush.nvim) 👄
+a color scheme for `{neo,}vim` inspired by the woods.
 
-supports treesitter, gitsigns, lazy, which-key, telescope, lsp diagnostics, and more.
+the current `main` branch now ships a modular lua theme for neovim, with a vimscript compatibility shim for `:colorscheme miasma`.
+
+supports modern treesitter captures, semantic tokens, lsp diagnostics, telescope, lazy, mason, which-key, gitsigns, cmp, neo-tree, nvim-tree, noice, notify, trouble, rainbow delimiters, treesitter-context, and more.
 
 ![theme preview](https://raw.githubusercontent.com/xero/miasma.nvim/main/preview.png)
 ```
@@ -13,15 +15,13 @@ supports treesitter, gitsigns, lazy, which-key, telescope, lsp diagnostics, and 
 a fog descends upon your editor
 https://github.com/xero/miasma.nvim
 
-## flavors
+## structure
 
-this theme is available in a classic vim compatible format, optimized lua, and a development lua version. you can install different flavors by using the corresponding branches:
+`main` contains the shipped lua theme:
 
-* [main](https://github.com/xero/miasma.nvim/tree/main) - classic vim version
-* lua - optimized lua version (coming soon)
-* [dev](https://github.com/xero/miasma.nvim/tree/dev) - development lua version
-
-for speed and greatest compatibility, use the main branch.
+* `colors/miasma.lua` - neovim colorscheme entrypoint
+* `lua/miasma/` - palette, config, loader, and highlight modules
+* `colors/miasma.vim` - compatibility shim for neovim and fallback legacy vim definitions
 
 ## installation
 
@@ -58,24 +58,23 @@ set the color scheme with the builtin command `:colorscheme`
 
 ## customization
 
-this theme is built with `lush.nvim`, so customizations are quite easy.
+the lua theme exposes a small configuration layer:
 
-first, checkout the [dev](https://github.com/xero/miasma.nvim/tree/dev) branch `git fetch origin dev && git checkout dev`, open the lua theme `nvim lua/lush_theme/miasma.lua` and execute `:Lushify`. then adjust colors to suit your taste with real-time feedback. checkout [the dev branch readme](https://github.com/xero/miasma.nvim/blob/dev/README.md) for details on building the optimized colorscheme. lots more details on using `lush` in [their repo](https://github.com/rktjmp/lush.nvim).
+```lua
+require("miasma").setup({
+  transparent = false,
+  term_colors = true,
+  color_overrides = {},
+  highlight_overrides = {},
+})
+vim.cmd("colorscheme miasma")
+```
+
+the refactor plan and implementation checklist live in `MIASMA_REFACTOR_PLAN.md`.
 
 ## extras
 
-this theme has been ported to a few different apps, and are included in the `extras` directory:
-
-* `miasma.Xresources` - colors for [xclients](https://wiki.archlinux.org/title/x_resources) (e.g. unix terminal emulators)
-* `miasma.itermcolors` - colors for [iterm2](https://iterm2.com)
-* `miasma.fish` - colors for [fish](https://fishshell.com/)
-* `miasma.zsh` - colors for [zsh](https://zsh.org)
-* `miasma.yml` - colors for [alacritty](https://alacritty.org) (yml format)
-* `miasma.toml` - colors for [alacritty](https://alacritty.org) (toml format)
-* `miasma.colorscheme` - colors for [qterminal](https://github.com/lxqt/qterminal)
-* `miasma.ghostty` - colors for [ghostty](https://ghostty.org/)
-
-more on the way, and pr's for others are welcomed!
+terminal and app extras are planned, but are not currently shipped on this branch.
 
 # license
 
