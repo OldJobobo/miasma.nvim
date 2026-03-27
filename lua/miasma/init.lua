@@ -1,8 +1,10 @@
 local config = require("miasma.config")
 local base_palette = require("miasma.palette")
 local util = require("miasma.util")
+local version = require("miasma.version")
 
 local M = {}
+M.VERSION = version.current
 
 local function load_palette()
   local opts = config.get()
@@ -49,6 +51,10 @@ end
 
 function M.setup(opts)
   config.setup(opts)
+end
+
+function M.version()
+  return M.VERSION
 end
 
 function M.load()

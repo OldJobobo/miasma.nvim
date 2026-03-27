@@ -56,6 +56,12 @@ vim.cmd("colorscheme miasma")
 
 set the color scheme with the builtin command `:colorscheme`
 
+the plugin also exposes its shipped version in lua:
+
+```lua
+print(require("miasma").version())
+```
+
 ## customization
 
 the lua theme exposes a small configuration layer:
@@ -75,6 +81,21 @@ the refactor plan and implementation checklist live in `MIASMA_REFACTOR_PLAN.md`
 ## extras
 
 terminal and app extras are planned, but are not currently shipped on this branch.
+
+## versioning
+
+releases now use semantic versioning.
+
+* the canonical repo version lives in `VERSION`
+* lua consumers can read it from `require("miasma").VERSION` or `require("miasma").version()`
+* release notes live in `CHANGELOG.md`
+* before tagging, verify release metadata with:
+
+```sh
+nvim --headless -u NONE -c "luafile scripts/check_release.lua"
+```
+
+for the next release, update `VERSION`, add a matching section to `CHANGELOG.md`, then create a git tag like `v0.1.1`.
 
 # license
 
