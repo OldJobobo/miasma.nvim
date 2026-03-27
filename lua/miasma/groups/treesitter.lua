@@ -10,7 +10,7 @@ return function(palette)
     ["@comment.todo"] = { fg = palette.base, bg = palette.amber, style = "bold" },
     ["@comment.warning"] = { fg = palette.base, bg = palette.orange, style = "bold" },
     ["@constant.macro"] = { fg = palette.orange },
-    ["@constructor.lua"] = { fg = palette.text },
+    ["@constructor.lua"] = { fg = palette.special },
     ["@diff.delta"] = { fg = palette.orange },
     ["@diff.minus"] = { fg = palette.error },
     ["@diff.plus"] = { fg = palette.accent_secondary },

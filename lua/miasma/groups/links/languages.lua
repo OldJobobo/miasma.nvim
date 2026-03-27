@@ -32,7 +32,7 @@ return function()
     phpVarSelector = { link = "phpIdentifier" },
     rubyConstant = { link = "Constant" },
     rubyDefine = { link = "Statement" },
-    rubyInstanceVariable = { link = "Number" },
+    rubyInstanceVariable = { link = "Identifier" },
     rubyLocalVariableOrMethod = { link = "Identifier" },
     shDerefVar = { link = "shDerefSimple" },
     vimContinue = { link = "Delimiter" },

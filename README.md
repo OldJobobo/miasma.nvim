@@ -80,11 +80,33 @@ the lua theme exposes a small configuration layer:
 require("miasma").setup({
   transparent = false,
   term_colors = true,
+  compile = false,
+  styles = {
+    comments = {},
+    keywords = { "bold" },
+    types = { "bold" },
+  },
+  integrations = {
+    all = true,
+    basic = true,
+    completion = true,
+    trees = true,
+    ui = true,
+    devtools = true,
+    navigation = true,
+    rendering = true,
+    mini = true,
+    snacks = true,
+  },
   color_overrides = {},
   highlight_overrides = {},
 })
 vim.cmd("colorscheme miasma")
 ```
+
+* `compile = true` writes a compiled highlight cache to Neovim's cache directory and reuses it on later loads when the config matches.
+* `styles` extends the base `Comment`, `Keyword`/`Statement`, and `Type` groups without changing the locked palette.
+* `integrations` can disable whole support categories while keeping the rest of the theme active. Set `all = false` and then opt categories back in selectively.
 
 the refactor plan and implementation checklist live in `MIASMA_REFACTOR_PLAN.md`.
 
