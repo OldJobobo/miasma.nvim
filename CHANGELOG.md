@@ -6,6 +6,9 @@ The format is based on Keep a Changelog, and this project now tracks versions wi
 
 ## [Unreleased]
 
+### Added
+- First-class `lualine.nvim` theme support via `lua/lualine/themes/miasma.lua`.
+
 ## [0.1.0] - 2026-03-26
 
 ### Added

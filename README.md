@@ -4,7 +4,7 @@ a color scheme for `{neo,}vim` inspired by the woods.
 
 the current `main` branch now ships a modular lua theme for neovim, with a vimscript compatibility shim for `:colorscheme miasma`.
 
-supports modern treesitter captures, semantic tokens, lsp diagnostics, telescope, lazy, mason, which-key, gitsigns, cmp, neo-tree, nvim-tree, noice, notify, trouble, rainbow delimiters, treesitter-context, and more.
+supports modern treesitter captures, semantic tokens, lsp diagnostics, lualine, telescope, lazy, mason, which-key, gitsigns, cmp, neo-tree, nvim-tree, noice, notify, trouble, rainbow delimiters, treesitter-context, and more.
 
 ![theme preview](https://raw.githubusercontent.com/xero/miasma.nvim/main/preview.png)
 ```
@@ -36,6 +36,16 @@ using `lazy`
     vim.cmd("colorscheme miasma")
   end,
 }
+```
+
+with `lualine.nvim`, keep `theme = "auto"` to use the bundled `miasma` lualine theme automatically:
+
+```lua
+require("lualine").setup({
+  options = {
+    theme = "auto",
+  },
+})
 ```
 
 using `plug`
